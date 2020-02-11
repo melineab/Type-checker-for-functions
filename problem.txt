@@ -1,0 +1,31 @@
+Type checker for functions
+
+
+Implement a types decorator for function arguments validation. 
+The decorator must match number of arguments to the number of types, 
+each argument's type to the corresponding type, provided in the decorator. 
+The type of returning value must be validated as well. 
+It must be provided to the decorator by _ret keyword argument. 
+If any mismatch occurs the decorator must raise Exception.
+
+Resulted decorator must work with any Python function.
+
+
+
+Usage Examples:
+
+
+@types(int, float, _ret=float)
+
+def plus(a, b):
+
+   return a + b
+
+
+
+
+@types(str, _ret=str)
+
+def rev(txt):
+
+   return txt[::-1]
